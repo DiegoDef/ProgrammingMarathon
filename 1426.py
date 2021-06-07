@@ -1,0 +1,1 @@
+# Os tijolos rotulados aparecem apenas em linhas ímpares, e ocupam posições ímpares dentro das suas linhas.
