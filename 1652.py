@@ -1,8 +1,3 @@
-"""Se a palavra está na lista de palavras irregulares substitua-a com o plural dado.
-Senão se a palavra termina em uma consoante seguida por "y", substitua "y" por "ies".
-Senão se a palavra termina em "o", "s", "ch", "sh" ou "x", acrescente "es" à palavra.
-Senão acrescente "s" à palavra."""
-
 l, n = map(int, input().split())
 irregular_words = {}
 produtos = []
@@ -21,7 +16,7 @@ for prod in produtos:
     elif prod.endswith("y") and prod[-2] not in vogais:
         prod = prod[::-1].replace("y", "sei", 1)
         print(prod[::-1])
-    elif prod in plurais:
+    elif prod[-1] in plurais or prod[len(prod)-2:] in plurais:
         print(prod + "es")
     else:
         print(prod + "s")

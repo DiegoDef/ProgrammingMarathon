@@ -1,4 +1,2 @@
-string = "abajuhuju"
-string = string[::-1].replace("uj", "AC", 1)
-print(string)
-print(string[::-1])
+prod = "abc"
+print(prod[len(prod)-2:])
