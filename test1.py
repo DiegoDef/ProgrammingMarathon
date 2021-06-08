@@ -1,1 +1,2 @@
-print(6/2 == 3.0)
+num = 123.32
+print(round(num, 3))

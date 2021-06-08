@@ -10,7 +10,7 @@ def soma_fracao(a, b, c, d):
     return dividendo, divisor
 
 
-def menor_possível(e, f):
+def menor_possivel(e, f):
     primos = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)
     for num in primos:
         dividendo = e / num
@@ -20,10 +20,10 @@ def menor_possível(e, f):
             f = divisor
         m = min(e, f)
         if num > (m / 2)+1:
-            return list(map(int, (e, f)))
+            return e, f
 
 
 a, b, c, d = map(int, input().split())
-e, f = soma_fracao(a, b, c, d)
-e, f = menor_possível(e, f)
-print(e, f)
+pri, seg = soma_fracao(a, b, c, d)
+e, f = menor_possivel(pri, seg)
+print(int(e), int(f))
