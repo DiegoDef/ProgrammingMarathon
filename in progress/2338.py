@@ -15,10 +15,8 @@ morse_dict = {'=.===': 'a', '===.=.=.=': 'b', '===.=.===.=': 'c', '===.=.=': 'd'
 for _ in range(int(input())):
     new_w = ''
     words = input().split('.......')
-    final_word = words[-1]
     for w in words:
         for let in w.split('...'):
             new_w += morse_dict[let]
-        if w != final_word:
-            new_w += ' '
-    print(new_w)
+        new_w += ' '
+    print(new_w.strip())

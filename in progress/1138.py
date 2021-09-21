@@ -13,5 +13,3 @@ while (n := input().split()) != ['0', '0']:
         else:
             print(r)
         cont += 1
-
-# com problemas de otimição. Time limit exceeded
